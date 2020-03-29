@@ -1,0 +1,14 @@
+===============================================
+kernel.sh
+
+Usage:
+    To compile a kernel and convert it into ZIP format
+
+Steps:
+    Clone the script in kernel source directoy
+bash kernel.sh
+
+Thats it, the kernel zip will be ready in zipper directory
+===============================================
+
+
