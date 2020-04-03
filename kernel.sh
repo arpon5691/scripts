@@ -11,6 +11,7 @@ git clone https://android.googlesource.com/platform/prebuilts/clang/host/linux-x
 git clone https://android.googlesource.com/platform/system/libufdt scripts/ufdt/libufdt
 
 # Some nigga exports
+export KBUILD_BUILD_HOST="tesla_buildbot"
 export KBUILD_BUILD_USER="tesla"
 export KBUILD_JOBS="$((`grep -c '^processor' /proc/cpuinfo`))"
 export ARCH=arm64 && export SUBARCH=arm64
