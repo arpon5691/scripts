@@ -1,6 +1,6 @@
 # Cleaning Everything
-make clean
-make mrproper
+make O=out clean
+make O=out mrproper
 rm -rf out zipper
 mkdir out
 
