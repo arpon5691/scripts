@@ -11,8 +11,8 @@ git clone https://android.googlesource.com/platform/prebuilts/clang/host/linux-x
 git clone https://android.googlesource.com/platform/system/libufdt scripts/ufdt/libufdt
 
 # Some nigga exports
-export KBUILD_BUILD_HOST="tesla_buildbot"
-export KBUILD_BUILD_USER="tesla"
+export KBUILD_BUILD_HOST="arpon's_buildbox"
+export KBUILD_BUILD_USER="arpon"
 export KBUILD_JOBS="$((`grep -c '^processor' /proc/cpuinfo`))"
 export ARCH=arm64 && export SUBARCH=arm64
 
@@ -27,10 +27,10 @@ python2 "scripts/ufdt/libufdt/utils/src/mkdtboimg.py" \
 create "out/arch/arm64/boot/dtbo.img" --page_size=4096 "out/arch/arm64/boot/dts/qcom/sm6150-idp-overlay.dtbo"
 
 # Refining the kernel
-git clone https://github.com/tesla59/AnyKernel3 zipper
+git clone https://github.com/arpon5691/AnyKernel3 zipper
 cp out/arch/arm64/boot/Image.gz-dtb zipper
 cp out/arch/arm64/boot/dtbo.img zipper
 cd zipper
-zip -r9 hydrakernel-$(TZ=Asia/Kolkata date +'%Y%m%d-%H%M').zip * -x README.md hydrakernel-$(TZ=Asia/Kolkata date +'%Y%m%d-%H%M').zip
+zip -r9 phoenixkernel-$(TZ=Asia/Kolkata date +'%Y%m%d-%H%M').zip * -x README.md phoenixkernel-$(TZ=Asia/Kolkata date +'%Y%m%d-%H%M').zip
 
 # Uploading will be done later
