@@ -11,8 +11,8 @@ git clone https://android.googlesource.com/platform/prebuilts/clang/host/linux-x
 git clone https://android.googlesource.com/platform/system/libufdt scripts/ufdt/libufdt
 
 # Some nigga exports
-export KBUILD_BUILD_HOST="arpon's_buildbox"
-export KBUILD_BUILD_USER="arpon"
+export KBUILD_BUILD_HOST="Kernelmachine"
+export KBUILD_BUILD_USER="Arpon"
 export KBUILD_JOBS="$((`grep -c '^processor' /proc/cpuinfo`))"
 export ARCH=arm64 && export SUBARCH=arm64
 
@@ -31,6 +31,6 @@ git clone https://github.com/arpon5691/AnyKernel3 zipper
 cp out/arch/arm64/boot/Image.gz-dtb zipper
 cp out/arch/arm64/boot/dtbo.img zipper
 cd zipper
-zip -r9 phoenixkernel-$(TZ=Asia/Kolkata date +'%Y%m%d-%H%M').zip * -x README.md phoenixkernel-$(TZ=Asia/Kolkata date +'%Y%m%d-%H%M').zip
+zip -r9 MaxedUpKernel-$(TZ=Asia/Kolkata date +'%Y%m%d-%H%M').zip * -x README.md MaxedUpKernel-$(TZ=Asia/Kolkata date +'%Y%m%d-%H%M').zip
 
 # Uploading will be done later
